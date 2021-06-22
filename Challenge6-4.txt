@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>switch</title></head>
+<body>
+<h3>월화수목금토일</h3>
+<hr>
+<script>
+var schedule = 0;
+var work = prompt("월화수목금토일 중에 입력하세요","");
+switch(work) {
+	case "월" : day = " 은 출근";
+		break;
+	case "화" : day = "는 출근";
+		break;
+	case "수" : day = "는 출근";
+		break;
+	case "목" : day = "은 출근";
+		break;
+	case "금" : day = "은 휴일";
+		break;
+	case "토" : day = "는 휴일";
+		break;
+	case "일" : day = "은 휴일";
+		break;
+
+}
+	document.write(work + day);
+</script>
+</body>
+</html>
