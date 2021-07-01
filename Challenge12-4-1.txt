@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>일기 쓰기</title>
+<script>
+function store() {
+	if(!window.localStorage) {
+		alert("지원하지 않습니다.");
+		return;
+	}
+	var now = new Date();
+	var diary = document.getElementById("diary").value;	
+	localStorage.setItem(diary);
+}
+function view() {
+	var win = window.open("Challenge12-4-2.html", "viewwin");
+}
+</script>
+</head>
+<body>
+<h3>일기쓰기</h3>
+<hr>
+<form>
+<label>오늘<br>
+<textarea id="diary" cols="100" rows="20"></textarea>
+</label>
+<br>
+<input type="button" value="저장" onclick="store()">
+<input type="button" value="보기" onclick="view()">
+</form>
+</body>
+</html>
