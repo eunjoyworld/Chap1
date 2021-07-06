@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>오디오 재생 리스트</title>
+<style>
+td.index {
+	border : 1px solid yellowgreen;
+	padding-left : 3px;
+	padding-right : 3px;
+}
+th {
+	width : 200px;
+	text-align : left;
+	border-bottom : 1px solid gray;	
+}
+</style>
+</head>
+<body>
+<h3>오디오 재생  리스트</h3>
+<hr>
+<audio id="audio" src="New version National Anthem of Korea.mp4" controls></audio>
+<hr>
+<table>
+<tr><td class="index">1</td><th><span>애국가</span></th>
+	<td><button id ="play" onclick="control(event)">재생</button></td>
+	<td><button id="pause" onclick="control(event)">중지</button></td></tr>
+<tr><td class="index">2</td><th><span>Moon Glow</span></th>
+	<td><button id ="play2" onclick="control(event)">재생</button></td>
+	<td><button id="pause2" onclick="control(event)">중지</button></td></tr>
+<tr><td class="index">3</td><th><span>Embraceable You</span></th>
+	<td><button id ="play3" onclick="control(event)">재생</button></td>
+	<td><button id="pause3" onclick="control(event)">중지</button></td></tr>
+</table>
+<script>
+var audio = document.getElementById("audio");
+function control(e) {
+	var id = e.target.id;
+	if(id == "play") { 
+		audio.play();
+	}
+	else if(id == "pause") { 
+		audio.pause();
+	}
+}
+</script>
+</body>
+</html>
